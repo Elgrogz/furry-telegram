@@ -1,6 +1,7 @@
 package com.example.user.criminalintent;
 
 import java.util.Date;
+import java.text.DateFormat;
 import java.util.UUID;
 
 /**
@@ -16,7 +17,6 @@ public class Crime {
     public Crime() {
         mId = UUID.randomUUID();
         mDate = new Date();
-
     }
 
     public UUID getmID() {
@@ -48,4 +48,8 @@ public class Crime {
         mSolved = solved;
     }
 
+    @Override
+    public String toString() {
+        return mTitle;
+    }
 }
